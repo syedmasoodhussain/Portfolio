@@ -1,37 +1,67 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-const Contact = () => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
+    message: ''
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({
+      ...formData,
+      [name]: value
+    });
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs.send(process.env.VITE_EMAILJS_SERVICE_ID as string, process.env.VITE_EMAILJS_TEMPLATE_ID as string, formData, process.env.VITE_EMAILJS_PUBLIC_KEY as string)
-      .then((response: any) => {
-        console.log('Message sent successfully!', response.status, response.text);
-      })
-      .catch((error: any) => {
-        console.error('Failed to send message:', error);
+
+    emailjs.send('service_y7sd0g8', 'template_35rw1ee', formData, 'ZaqQcbHgC4_pvrLfn')
+      .then((result) => {
+        alert('Your message has been sent successfully!');
+      }, (error) => {
+        alert('Something went wrong, please try again!');
+        console.error('EmailJS error:', error);
       });
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Your Name" onChange={handleChange} required />
-      <input type="email" name="email" placeholder="Your Email" onChange={handleChange} required />
-      <textarea name="message" placeholder="Your Message" onChange={handleChange} required />
+      <label htmlFor="name">Your Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+
+      <label htmlFor="email">Your Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+
+      <label htmlFor="message">Your Message:</label>
+      <textarea
+        id="message"
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        required
+      ></textarea>
+
       <button type="submit">Send Message</button>
     </form>
   );
 };
 
-export default Contact;
+export default ContactForm;

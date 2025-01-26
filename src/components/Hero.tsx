@@ -72,7 +72,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
             >
-              MD, USA | (602) 582-5402 | masoodhussainsyed66@gmail.com
+              VA, USA | (602) 582-5402 | masoodhussainsyed66@gmail.com
             </motion.p>
 
             <motion.div

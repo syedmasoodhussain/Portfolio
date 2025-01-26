@@ -82,8 +82,8 @@ export default function Hero() {
               className="flex space-x-6"
             >
               {[
-                { icon: Github, href: "https://github.com", label: "GitHub" },
-                { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+                { icon: Github, href: "https://github.com/syedmasoodhussain", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/syedmasoodhussain", label: "LinkedIn" },
                 { icon: Mail, href: "mailto:masoodhussainsyed66@gmail.com", label: "Email" }
               ].map(({ icon: Icon, href, label }, index) => (
                 <motion.a

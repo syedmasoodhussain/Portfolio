@@ -21,7 +21,7 @@ export const projects: Project[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: "June 2023 - Present",
+    date: "August 2023 - Present",
     title: "Java Full Stack Developer",
     company: "Capital One",
     location: "MD, USA",
@@ -34,7 +34,7 @@ export const experience: TimelineItem[] = [
     ]
   },
   {
-    date: "Jan 2019 - Aug 2022",
+    date: "June 2019 - Aug 2022",
     title: "Java Full Stack Developer",
     company: "Genpact",
     location: "India",

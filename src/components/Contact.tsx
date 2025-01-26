@@ -15,11 +15,11 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID')
-      .then((response) => {
+    emailjs.send(process.env.VITE_EMAILJS_SERVICE_ID as string, process.env.VITE_EMAILJS_TEMPLATE_ID as string, formData, process.env.VITE_EMAILJS_PUBLIC_KEY as string)
+      .then((response: any) => {
         console.log('Message sent successfully!', response.status, response.text);
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.error('Failed to send message:', error);
       });
   };

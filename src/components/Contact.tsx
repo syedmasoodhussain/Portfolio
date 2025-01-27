@@ -17,16 +17,15 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        'service_y7sd0g8', // Service ID
+        'template_d501tzw', // Template ID
         formRef.current,
-
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-
+        'ZaqQcbHgC4_pvrLfn' // Public Key
       );
       setSubmitStatus('success');
       formRef.current.reset();
     } catch (error) {
+      console.error("Email sending error:", error); // Log the error for debugging
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

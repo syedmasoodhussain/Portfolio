@@ -12,20 +12,27 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
+/* Input field styles for visibility */
+input, textarea {
+  background-color: white; /* Ensure input fields have a white background */
+  color: black; /* Ensure text is visible */
 }
 
-::-webkit-scrollbar-track {
-  background: #1a1a2e;
+/* New styles for the contact form button */
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #1d4ed8; /* Original button color */
+  color: white; /* Button text color */
 }
 
-::-webkit-scrollbar-thumb {
-  background: #4c1d95;
-  border-radius: 5px;
+button:hover {
+  transform: scale(1.05);
+  background-color: #2563eb; /* Original button hover color */
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #6d28d9;
+/* Responsive styles for the contact form */
+@media (max-width: 640px) {
+  .max-w-4xl {
+    max-width: 100%;
+  }
 }

@@ -17,15 +17,15 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        'service_y7sd0g8', // Service ID
-        'template_d501tzw', // Template ID
+        'service_y7sd0g8',
+        'template_d501tzw',
         formRef.current,
-        'ZaqQcbHgC4_pvrLfn' // Public Key
+        'ZaqQcbHgC4_pvrLfn'
       );
       setSubmitStatus('success');
       formRef.current.reset();
     } catch (error) {
-      console.error("Email sending error:", error); // Log the error for debugging
+      console.error("Email sending error:", error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -41,9 +41,15 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">
+            <motion.button
+              className="px-8 py-3 bg-light-green-500 text-white rounded-md hover:bg-light-green-600 transition-all duration-300"
+            >
+              Let's Connect!
+            </motion.button>
+          </h2>
           
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 border-2 border-gray-500 rounded-md p-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Name
@@ -53,7 +59,7 @@ export default function Contact() {
                 name="name"
                 id="name"
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out p-3 text-lg bg-light-blue-100" // Added background color
               />
             </div>
 
@@ -66,7 +72,7 @@ export default function Contact() {
                 name="email"
                 id="email"
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out p-3 text-lg bg-light-blue-100" // Added background color
               />
             </div>
 
@@ -79,26 +85,21 @@ export default function Contact() {
                 id="message"
                 rows={4}
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-light-blue-100 focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out p-3 text-lg" // Added background color
               ></textarea>
             </div>
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
-            >
-              {isSubmitting ? (
-                'Sending...'
-              ) : (
-                <>
-                  Send Message
-                  <Send className="ml-2 h-4 w-4" />
-                </>
-              )}
-            </motion.button>
+            <div className="flex space-x-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                type="submit"
+                disabled={isSubmitting}
+                className="flex-1 py-5 px-8 border border-transparent rounded-lg shadow-lg text-white bg-blue-500 hover:bg-blue-600 transition duration-300 ease-in-out font-bold text-lg"
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </motion.button>
+            </div>
 
             {submitStatus === 'success' && (
               <p className="text-green-600 text-center">Message sent successfully!</p>

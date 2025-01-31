@@ -81,7 +81,7 @@ export default function Hero() {
               transition={{ delay: 1 }}
               className="flex space-x-6"
             >
-              {[
+              {[ 
                 { icon: Github, href: "https://github.com/syedmasoodhussain", label: "GitHub" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/syedmasoodhussain", label: "LinkedIn" },
                 { icon: Mail, href: "mailto:masoodhussainsyed66@gmail.com", label: "Email" }
@@ -112,10 +112,10 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-md font-mono hover:from-purple-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
+                className="px-8 py-3 bg-light-green-500 text-white rounded-md font-mono hover:bg-light-green-600 transition-all duration-300 shadow-lg hover:shadow-green-500/25"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Check out my work!
+                Let's Connect!
               </motion.button>
             </motion.div>
           </motion.div>

@@ -4,15 +4,16 @@ interface NavItem {
   id: string;
   label: string;
   fontSize: string;
+  color: string;
 }
 
 const navItems: NavItem[] = [
-  { id: 'home', label: 'Home', fontSize: 'text-2xl' }, // Updated to text-2xl
-  { id: 'about', label: 'About Me', fontSize: 'text-2xl' }, // Updated to text-2xl
-  { id: 'skills', label: 'Skills', fontSize: 'text-2xl' }, // Updated to text-2xl
-  { id: 'timeline', label: 'Experience', fontSize: 'text-2xl' }, // Updated to text-2xl
-  { id: 'projects', label: 'Projects', fontSize: 'text-2xl' }, // Updated to text-2xl
-  { id: 'contact', label: 'Contact', fontSize: 'text-2xl' } // Updated to text-2xl
+  { id: 'home', label: 'Home', fontSize: 'text-2xl', color: 'bg-red-500' },
+  { id: 'about', label: 'About Me', fontSize: 'text-2xl', color: 'bg-green-500' },
+  { id: 'skills', label: 'Skills', fontSize: 'text-2xl', color: 'bg-blue-500' },
+  { id: 'timeline', label: 'Experience', fontSize: 'text-2xl', color: 'bg-yellow-500' },
+  { id: 'projects', label: 'Projects', fontSize: 'text-2xl', color: 'bg-purple-500' },
+  { id: 'contact', label: 'Contact', fontSize: 'text-2xl', color: 'bg-teal-500' }
 ];
 
 export default function Navigation() {
@@ -36,7 +37,7 @@ export default function Navigation() {
             <motion.button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`${item.fontSize} text-slate-300 hover:text-teal-400 font-mono relative px-4 py-2`} // Dynamically apply fontSize
+              className={`rounded-full ${item.fontSize} ${item.color} text-slate-300 hover:text-teal-400 font-mono relative px-4 py-2`} // Updated for oval shape
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 

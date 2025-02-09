@@ -22,7 +22,7 @@ export default function About() {
             <p className="font-sans leading-relaxed">
                Full Stack Developer with over 4+ years of hands-on experience, specializing in the end-to-end development
               of web applications and services in the Financial and IT industry. Proficient in various technologies,
-              including Java, J2EE, Spring Boot, and modern front-end frameworks such as React.js, Angular, HTML5, CSS3,
+              including J2EE, Spring Boot, and modern front-end frameworks such as React.js, Angular, HTML5, CSS3,
               and JavaScript.
             </p>
           </motion.div>

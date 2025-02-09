@@ -59,7 +59,7 @@ export default function Contact() {
                 name="name"
                 id="name"
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out p-3 text-lg bg-light-blue-100" // Added background color
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out p-3 text-lg bg-light-blue-100"
               />
             </div>
 
@@ -72,7 +72,7 @@ export default function Contact() {
                 name="email"
                 id="email"
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out p-3 text-lg bg-light-blue-100" // Added background color
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out p-3 text-lg bg-light-blue-100"
               />
             </div>
 
@@ -85,7 +85,7 @@ export default function Contact() {
                 id="message"
                 rows={4}
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-light-blue-100 focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out p-3 text-lg" // Added background color
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-light-blue-100 focus:border-blue-500 focus:ring-blue-500 transition duration-300 ease-in-out p-3 text-lg"
               ></textarea>
             </div>
 
@@ -108,6 +108,19 @@ export default function Contact() {
               <p className="text-red-600 text-center">Failed to send message. Please try again.</p>
             )}
           </form>
+
+          <div className="flex justify-center space-x-4 mt-8">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+              <motion.button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300">
+                LinkedIn
+              </motion.button>
+            </a>
+            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+              <motion.button className="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900 transition-all duration-300">
+                GitHub
+              </motion.button>
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

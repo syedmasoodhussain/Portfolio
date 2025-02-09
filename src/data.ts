@@ -22,12 +22,11 @@ export const projects: Project[] = [
 export const experience: TimelineItem[] = [
   {
     date: "August 2023 - Present",
-    title: "Java Full Stack Developer",
+    title: "Full Stack Developer",
     company: "Capital One",
     location: "MD, USA",
     description: [
-      "Developed robust backend systems using Java EE and Spring Boot",
-      "Appian Development & Automation with certification",
+      "Developed robust backend systems using Java EE and Spring Boot, React, JavaScript",
       "Backend Integration with third-party systems",
       "Database Management with MySQL",
       "AWS Deployment & Scalability management"
@@ -35,7 +34,7 @@ export const experience: TimelineItem[] = [
   },
   {
     date: "June 2019 - Aug 2022",
-    title: "Java Full Stack Developer",
+    title: "Full Stack Developer",
     company: "Genpact",
     location: "India",
     description: [

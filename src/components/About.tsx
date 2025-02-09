@@ -20,7 +20,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="font-sans leading-relaxed">
-               Full Stack Developer with over 4+ years of hands-on experience, specializing in the end-to-end development
+               JAVA FULL STACK DEVELOPER with over 4+ years of hands-on experience, specializing in the end-to-end development
               of web applications and services in the Financial and IT industry. Proficient in various technologies,
               including J2EE, Spring Boot, and modern front-end frameworks such as React.js, Angular, HTML5, CSS3,
               and JavaScript.
